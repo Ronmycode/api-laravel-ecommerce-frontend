@@ -8,7 +8,9 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("https://api-ecommerce.frencho.dev/");
+        const response = await fetch(
+          "https://api-ecommerce.frencho.dev/api/v1/products"
+        );
         if (!response.ok) {
           throw new Error("Error al obtener los productos");
         }
